@@ -1,0 +1,45 @@
+{
+    "log": {
+        "loglevel": "warning"
+    },
+    "inbounds": [
+        {
+            "port": 443,
+            "protocol": "trojan",
+            "settings": {
+                "clients": [
+                    {
+                        "password":"test",
+                        "name": "client1"
+                    }
+                ],
+                "decryption": "none",
+                "fallbacks": [
+                    {
+                        "dest": "nginx:1337"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "tls",
+                "tlsSettings": {
+                    "alpn": [
+                        "http/1.1"
+                    ],
+                    "certificates": [
+                        {
+                            "certificateFile": "/etc/letsencrypt/live/{YOUR_SERVER_NAME}/fullchain.pem",
+                            "keyFile": "/etc/letsencrypt/live/{YOUR_SERVER_NAME}/privkey.pem" 
+                        }
+                    ]
+                
+            }}}],
+    "outbounds": [
+                {
+                    "protocol": "freedom"
+                }
+            ]
+}
+
+
