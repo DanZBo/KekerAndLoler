@@ -4,7 +4,7 @@ This setup includes a placeholder page, featuring the legendary story of **Keker
 
 # V2Fly Trojan with Nginx and Docker
 
-This setup provides a secure V2Fly Trojan server with Nginx as a reverse proxy. It supports TLS encryption using Let's Encrypt certificates.([configuration guide](https://www.v2fly.org/en_US/v5/config/proxy/trojan.html))
+This simple setup provides a secure V2Fly Trojan server with Nginx as a reverse proxy. It supports TLS encryption using Let's Encrypt certificates.([configuration guide](https://www.v2fly.org/en_US/v5/config/proxy/trojan.html))
 
 ## Prerequisites
 
