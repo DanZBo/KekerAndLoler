@@ -9,8 +9,8 @@
             "settings": {
                 "clients": [
                     {
-                        "password":"test",
-                        "name": "client1"
+                        "password":"{PASSWORD}",
+                        "name": "Me"
                     }
                 ],
                 "decryption": "none",
@@ -29,8 +29,8 @@
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/etc/letsencrypt/live/{YOUR_SERVER_NAME}/fullchain.pem",
-                            "keyFile": "/etc/letsencrypt/live/{YOUR_SERVER_NAME}/privkey.pem" 
+                            "certificateFile": "/etc/letsencrypt/live/{YOUR_DOMAIN_NAME}/fullchain.pem",
+                            "keyFile": "/etc/letsencrypt/live/{YOUR_DOMAIN_NAME}/privkey.pem" 
                         }
                     ]
                 
