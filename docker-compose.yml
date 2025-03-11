@@ -26,5 +26,4 @@ services:
     ports:
       - "443:443"
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
       - /etc/letsencrypt:/etc/letsencrypt
