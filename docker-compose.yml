@@ -1,0 +1,29 @@
+services:
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "2"
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ./public/index.html:/var/www/html/index.html
+      - /var/www/certbot:/var/www/certbot
+
+  v2ray:
+    build: .
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2m"
+        max-file: "2"
+    ports:
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
